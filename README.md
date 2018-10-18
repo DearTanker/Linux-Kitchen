@@ -1,7 +1,5 @@
 # Linux Kitchen
 
-
-
 ## Tools Usage
 
 ###  link_info.sh
@@ -12,4 +10,14 @@ wget --no-check-certificate https://raw.githubusercontent.com/DearTanker/Linux-K
 chmod +x link_info.sh
 
 ./link_info.sh
+```
+
+###  link_info_v.sh
+
+```
+wget --no-check-certificate https://raw.githubusercontent.com/DearTanker/Linux-Kitchen/master/Network/link_info_v.sh
+
+chmod +x link_info_v.sh
+
+./link_info_v.sh
 ```
