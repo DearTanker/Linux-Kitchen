@@ -1,7 +1,4 @@
 ```
-
-
-
 yum install epel-release -y
 yum update -y
 yum install bind-utils net-tools wget ntp policycoreutils-python chrony git -y
