@@ -1,7 +1,7 @@
 ```
 yum install epel-release -y
 yum update -y
-yum install bind-utils net-tools wget ntp policycoreutils-python chrony git -y
+yum install bind-utils net-tools wget ntp policycoreutils-python chrony git wget -y
 
 systemctl enable chronyd
 systemctl start chronyd
