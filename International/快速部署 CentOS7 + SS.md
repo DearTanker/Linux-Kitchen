@@ -1,7 +1,9 @@
 ```
+
+
 yum install epel-release -y
 yum update -y
-yum install bind-utils net-tools wget ntp policycoreutils-python chrony git -y
+yum install bind-utils net-tools wget ntp policycoreutils-python chrony git dnf -y
 
 systemctl enable chronyd
 systemctl start chronyd
@@ -29,7 +31,7 @@ systemctl reboot
 
 grub2-editenv list
 
-rpm -qa | grep kerneldu -h --max-depth=1
+rpm -qa kernel
 
 yum remove
 
@@ -40,6 +42,10 @@ wget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master
 wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh
 chmod +x shadowsocks.sh
 ./shadowsocks.sh 2>&1 | tee shadowsocks.log
+
+wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev.sh
+chmod +x shadowsocks-libev.sh
+./shadowsocks-libev.sh 2>&1 | tee shadowsocks-libev.log
 
 sed -i "s/#DefaultLimitNOFILE=/DefaultLimitNOFILE=infinity/g" /etc/systemd/system.conf
 
