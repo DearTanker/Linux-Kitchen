@@ -1,7 +1,7 @@
 #!/bin/bash
 
 tmpfile=$(mktemp)
-netstat -anp | grep 'ESTABLISHED' | grep 'python' | grep 'tcp' | awk '{print $4,$5}' | grep -v '0.0.0.0'| awk -F '[:| ]' '$2>5000 && $2<8000{print $0}'  > ${tmpfile}
+netstat -anp | grep 'ESTABLISHED' | grep 'python' | grep 'tcp' | awk '{print $4,$5}' | grep -v '0.0.0.0'| awk -F '[:| ]' '$2>7000 && $2<7100{print $0}'  > ${tmpfile}
 for port in `cat ${tmpfile} | awk -F '[:| ]' '{print $2}' | sort| uniq`
 do
   num=$(grep ":${port} " ${tmpfile} | awk -F '[:| ]' '{print $3}' | sort |uniq| wc -l)
