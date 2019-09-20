@@ -84,4 +84,6 @@ ulimit -a
 
 tail -f /var/log/shadowsocks.log
 
+yum --exclude=kernel* update
+
 ```
