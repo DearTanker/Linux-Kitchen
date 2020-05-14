@@ -71,6 +71,7 @@ sysctl net.ipv4.tcp_available_congestion_control
 sysctl -n net.ipv4.tcp_congestion_control
 
 lsmod | grep bbr
+
 ```
 安装锐速
 
@@ -98,21 +99,7 @@ wget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master
 ```
 sed -i "s/#DefaultLimitNOFILE=/DefaultLimitNOFILE=infinity/g" /etc/systemd/system.conf
 ```
-防火墙设置及SSH端口修改
 
-```
-firewall-cmd --zone=public --add-port=26871/tcp --permanent
-
-systemctl enable firewalld
-systemctl is-enabled firewalld.service
-service firewalld restart
-firewall-cmd --get-active-zones
-firewall-cmd --set-default-zone=public
-firewall-cmd --zone=public --list-all
-
-sed -i "s/#Port 22/Port 26871/g" /etc/ssh/sshd_config
-semanage port -a -t ssh_port_t -p tcp 26871
-````
 最后的修改
 
 ```
@@ -121,7 +108,7 @@ systemctl reboot
 ulimit -a
 
 yum --exclude=kernel* update
-``
+```
 
 安装 V2Ray
 
@@ -152,16 +139,15 @@ service v2ray start
 
 service v2ray start|stop|status|reload|restart|force-reload
 
-
 systemctl start v2ray
 systemctl restart v2ray
 systemctl status v2ray
-
 
 systemctl start|stop|status|reload|restart|force-reload v2ray
 ```
 
 设置开机启动
+
 ```
 systemctl start v2ray
 
@@ -172,9 +158,11 @@ systemctl status v2ray
 systemctl is-enabled v2ray.service
 
 systemctl start|stop|status|reload|restart|force-reload v2ray
+
 ```
 
 Nginx 转发
+
 ```
 
     location /cache
