@@ -36,6 +36,42 @@ chmod +x speedtest-cli
 ./speedtest-cli --server 6715
 ./speedtest-cli --server 16332
 ```
+
+BBR 原版
+```
+uname -r
+
+rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+
+rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-4.el7.elrepo.noarch.rpm
+yum install https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm
+
+yum --enablerepo=elrepo-kernel install kernel-ml -y
+
+rpm -qa | grep kernel
+
+egrep ^menuentry /etc/grub2.cfg | cut -f 2 -d \'
+
+grub2-set-default 0
+
+reboot
+
+uname -r
+
+开启BBR，修改sysctl的配置
+
+echo 'net.core.default_qdisc=fq' | sudo tee -a /etc/sysctl.conf
+echo 'net.ipv4.tcp_congestion_control=bbr' | sudo tee -a /etc/sysctl.conf
+
+sysctl -p
+
+查看当前可用的拥塞控制算法
+
+sysctl net.ipv4.tcp_available_congestion_control
+sysctl -n net.ipv4.tcp_congestion_control
+
+lsmod | grep bbr
+```
 安装锐速
 
 ```
@@ -56,6 +92,7 @@ cat /proc/version
 wget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master/serverspeeder-v.sh && bash serverspeeder-v.sh CentOS 7.2 3.10.0-327.el7.x86_64 x64 3.11.20.5 serverspeeder_72327
 
 ```
+
 系统连接数优化
 
 ```
