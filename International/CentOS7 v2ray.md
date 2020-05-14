@@ -165,7 +165,7 @@ Nginx 转发
 
 ```
 
-    location /cache
+    location /path
     {
       if ($http_upgrade != "websocket") {
           return 404;
