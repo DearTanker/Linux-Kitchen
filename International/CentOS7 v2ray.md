@@ -84,7 +84,7 @@ grub2-set-default "CentOS Linux (3.10.0-327.36.3.el7.x86_64) 7 (Core)"
 
 systemctl reboot
 
-rpm -qa kernel
+rpm -qa | grep kernel
 
 yum remove
 
