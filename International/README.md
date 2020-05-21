@@ -2,7 +2,7 @@
 
 ```
 
-wget --no-check-certificate https://raw.githubusercontent.com/DearTanker/Linux-Kitchen/master/International/update-v2dat.sh
+wget --no-check-certificate https://git.io/Jf2Jv
 chmod +x update-v2dat.sh
 ./update-v2dat.sh
 
