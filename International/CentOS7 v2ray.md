@@ -73,26 +73,6 @@ sysctl -n net.ipv4.tcp_congestion_control
 lsmod | grep bbr
 
 ```
-安装锐速
-
-```
-systemctl reboot
-
-rpm -ivh http://vault.centos.org/7.2.1511/updates/x86_64/Packages/kernel-3.10.0-327.36.3.el7.x86_64.rpm  --force
-
-grub2-set-default "CentOS Linux (3.10.0-327.36.3.el7.x86_64) 7 (Core)"
-
-systemctl reboot
-
-rpm -qa | grep kernel
-
-yum remove
-
-cat /proc/version
-
-wget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master/serverspeeder-v.sh && bash serverspeeder-v.sh CentOS 7.2 3.10.0-327.el7.x86_64 x64 3.11.20.5 serverspeeder_72327
-
-```
 
 系统连接数优化
 
