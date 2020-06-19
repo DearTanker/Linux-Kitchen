@@ -30,7 +30,6 @@ python3 --version
 alternatives --set python /usr/bin/python3
 
 alternatives --auto python
-
 ```
 
 基础测速
