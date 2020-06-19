@@ -23,7 +23,7 @@ date -R
 Python3 安装
 
 ```
-dnf install python3
+yum install python3
 
 python3 --version
 
