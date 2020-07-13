@@ -47,6 +47,11 @@ chmod +x speedtest-cli
 ./speedtest-cli --server 25858
 ./speedtest-cli --server 6715
 ./speedtest-cli --server 16332
+
+bash <(curl -Lso- https://git.io/superspeed)
+
+curl -fsL https://ilemonra.in/LemonBenchIntl | bash -s fast
+
 ```
 
 BBR 原版
@@ -54,6 +59,11 @@ BBR 原版
 uname -r
 
 rpm -qa | grep kernel
+
+开启BBR，修改sysctl的配置
+echo 'net.core.default_qdisc=fq' | sudo tee -a /etc/sysctl.conf
+echo 'net.ipv4.tcp_congestion_control=bbr' | sudo tee -a /etc/sysctl.conf
+sysctl -p
 
 查看当前可用的拥塞控制算法
 
