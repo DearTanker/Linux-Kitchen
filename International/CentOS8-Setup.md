@@ -1,7 +1,6 @@
 初始化系统环境
 
 ```
-yum update -y
 yum install epel-release -y
 yum update -y
 yum install bind-utils net-tools netstat wget ntp policycoreutils-python chrony git dnf -y
