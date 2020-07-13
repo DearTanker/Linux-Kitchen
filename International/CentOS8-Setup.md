@@ -3,7 +3,7 @@
 ```
 yum install epel-release -y
 yum update -y
-yum install bind-utils net-tools netstat wget ntp policycoreutils-python chrony git dnf -y
+yum install bind-utils net-tools wget chrony git dnf -y
 yum groups install "Development Tools" -y
 ```
 
