@@ -4,7 +4,7 @@
 yum update -y
 yum install epel-release -y
 yum update -y
-yum install bind-utils net-tools netstat wget ntp policycoreutils-python chrony git dnf -y
+yum install bind-utils net-tools wget ntp policycoreutils-python chrony git dnf -y
 yum groups install "Development Tools" -y
 yum install glibc-headers gcc-c++ -y
 
