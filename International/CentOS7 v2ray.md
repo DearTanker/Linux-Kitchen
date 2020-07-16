@@ -35,6 +35,11 @@ chmod +x speedtest-cli
 ./speedtest-cli --server 25858
 ./speedtest-cli --server 6715
 ./speedtest-cli --server 16332
+
+bash <(curl -Lso- https://git.io/superspeed)
+
+curl -fsL https://ilemonra.in/LemonBenchIntl | bash -s fast
+
 ```
 
 BBR 原版
