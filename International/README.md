@@ -12,8 +12,8 @@ chmod +x update-v2dat.sh
 
 ```
 
-wget --no-check-certificate -O traffic.sh https://git.io/JJg59 traffic.sh
-chmod +x traffic.sh
-./traffic.sh
+wget --no-check-certificate -O stats.sh https://git.io/JJ2IQ stats.sh
+chmod +x stats.sh
+./stats.sh
 
 ```
