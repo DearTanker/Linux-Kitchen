@@ -7,3 +7,13 @@ chmod +x update-v2dat.sh
 ./update-v2dat.sh
 
 ```
+
+# Traffic
+
+```
+
+wget --no-check-certificate -O traffic.sh https://git.io/JJg59 traffic.sh
+chmod +x traffic.sh
+./traffic.sh
+
+```
