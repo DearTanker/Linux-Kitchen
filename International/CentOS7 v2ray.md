@@ -100,22 +100,43 @@ yum --exclude=kernel* update
 
 
 ```
-bash <(curl -L -s https://install.direct/go.sh)
+// 安装可执行文件和 .dat 数据文件
+
+curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
+
+// 只更新 .dat 数据文件
+
+curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh
+
+// 安装和更新 V2Ray
+
+# bash install-release.sh
+
+//安装最新发行的 geoip.dat 和 geosite.dat
+
+# bash install-dat-release.sh
+
 ```
+
 相关文件
 
 ```
-/usr/bin/v2ray/v2ray
-/usr/bin/v2ray/v2ctl
-/etc/v2ray/config.json
-/usr/bin/v2ray/geoip.dat
-/usr/bin/v2ray/geosite.dat
+installed: /usr/local/bin/v2ray
+installed: /usr/local/bin/v2ctl
+installed: /usr/local/share/v2ray/geoip.dat
+installed: /usr/local/share/v2ray/geosite.dat
+installed: /usr/local/etc/v2ray/config.json
+installed: /var/log/v2ray/
+installed: /var/log/v2ray/access.log
+installed: /var/log/v2ray/error.log
+installed: /etc/systemd/system/v2ray.service
+installed: /etc/systemd/system/v2ray@.service
 ```
 
 检查配置文件
 
 ```
-/usr/bin/v2ray/v2ray -test -config /etc/v2ray/config.json
+/usr/local/bin/v2ray -test -config /usr/local/etc/v2ray/config.json
 ```
 
 相关命令
