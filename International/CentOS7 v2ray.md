@@ -50,7 +50,7 @@ uname -r
 
 rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 
-yum install https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm
+yum install https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm -y
 
 yum --enablerepo=elrepo-kernel install kernel-ml -y
 
