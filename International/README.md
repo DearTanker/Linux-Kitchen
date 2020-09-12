@@ -2,7 +2,7 @@
 
 ```
 
-wget --no-check-certificate -O update-v2dat.sh https://git.io/Jf2Jv update-v2dat.sh
+wget --no-check-certificate -O update-v2dat-v2.sh https://git.io/JUlrH update-v2dat-v2.sh
 chmod +x update-v2dat-v2.sh
 ./update-v2dat-v2.sh
 
