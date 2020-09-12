@@ -2,7 +2,7 @@
 
 set -e
 
-v2ray_folder="/usr/bin/v2ray/"
+v2ray_folder="/usr/local/share/v2ray/"
 
 GREEN='\033[0;32m'
 NC='\033[0m'
