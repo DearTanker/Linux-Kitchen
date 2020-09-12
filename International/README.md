@@ -1,3 +1,14 @@
+# Update-v2dat 4.27.0+
+
+```
+
+wget --no-check-certificate -O update-v2dat.sh https://git.io/Jf2Jv update-v2dat.sh
+chmod +x update-v2dat-v2.sh
+./update-v2dat-v2.sh
+
+```
+
+
 # Update-v2dat
 
 ```
