@@ -61,7 +61,7 @@ rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 
 yum install https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm -y
 
-yum -y install --enablerepo=elrepo-kernel kernel-ml kernel-ml-devel
+yum -y install --enablerepo=elrepo-kernel kernel-ml kernel-ml-devel kernel-ml-headers
 
 grubby --default-kernel
 
