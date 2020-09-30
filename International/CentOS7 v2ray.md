@@ -8,6 +8,8 @@ yum install bind-utils net-tools wget ntp policycoreutils-python chrony git dnf 
 yum groups install "Development Tools" -y
 yum install glibc-headers gcc-c++ -y
 
+hostnamectl set-hostname
+
 ```
 
 时间同步
