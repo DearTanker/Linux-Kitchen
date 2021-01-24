@@ -1,3 +1,9 @@
+设置 root 账户资格
+
+```
+sudo passwd root
+```
+
 初始化系统环境
 
 ```
