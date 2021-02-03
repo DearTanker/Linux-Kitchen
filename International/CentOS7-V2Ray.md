@@ -60,7 +60,7 @@ rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 
 yum install https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm -y
 
-yum --enablerepo=elrepo-kernel install kernel-ml -y
+yum -y install --enablerepo=elrepo-kernel kernel-ml kernel-ml-devel kernel-ml-headers
 
 rpm -qa | grep kernel
 
