@@ -1,8 +1,8 @@
 安装 V2Ray
 
 ```
-# curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
-# bash install-release.sh
+curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
+bash install-release.sh
 ```
 
 相关文件
