@@ -1,10 +1,8 @@
 安装 V2Ray
 
 ```
-
 # curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
 # bash install-release.sh
-
 ```
 
 相关文件
@@ -25,15 +23,12 @@ installed: /etc/systemd/system/v2ray@.service
 检查配置文件
 
 ```
-
 /usr/local/bin/v2ray -test -config /usr/local/etc/v2ray/config.json
-
 ```
 
 相关命令
 
 ```
-
 systemctl enable v2ray
 systemctl is-enabled v2ray.service
 
@@ -41,7 +36,6 @@ systemctl restart v2ray
 systemctl status v2ray
 
 systemctl start|stop|status|reload|restart|force-reload v2ray
-
 ```
 
 安装 aaPanel
@@ -53,7 +47,6 @@ yum install -y wget && wget -O install.sh http://www.aapanel.com/script/install_
 Nginx 转发
 
 ```
-
     location /path
     {
       if ($http_upgrade != "websocket") {
@@ -68,5 +61,4 @@ Nginx 转发
       proxy_set_header X-Real-IP $remote_addr;
       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
-
 ```
