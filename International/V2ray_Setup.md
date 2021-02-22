@@ -47,9 +47,7 @@ systemctl start|stop|status|reload|restart|force-reload v2ray
 安装 aaPanel
 
 ```
-
 yum install -y wget && wget -O install.sh http://www.aapanel.com/script/install_6.0_en.sh && bash install.sh
-
 
 ```
 
@@ -71,5 +69,5 @@ Nginx 转发
       proxy_set_header X-Real-IP $remote_addr;
       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
-    
+
 ```
