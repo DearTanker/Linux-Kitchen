@@ -23,6 +23,8 @@ installed: /etc/systemd/system/v2ray@.service
 检查配置文件
 
 ```
+ln -s "/usr/local/etc/v2ray/config.json"
+
 /usr/local/bin/v2ray -test -config /usr/local/etc/v2ray/config.json
 ```
 
