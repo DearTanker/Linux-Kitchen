@@ -96,17 +96,6 @@ lsmod | grep bbr
 sed -i "s/#DefaultLimitNOFILE=/DefaultLimitNOFILE=infinity/g" /etc/systemd/system.conf
 ```
 
-
-安装VnStat
-```
-yum install vnstat -y
-vnstat -i eth0 -u
-vnstatd -d
-service vnstat start
-chkconfig vnstat on
-```
-
-
 最后的修改
 
 ```
