@@ -7,8 +7,8 @@ v2ray_folder="/usr/local/share/v2ray/"
 GREEN='\033[0;32m'
 NC='\033[0m'
 
-GEOIP_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat"
-GEOSITE_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat"
+GEOIP_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
+GEOSITE_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
 
 echo -e "${GREEN}>>> change directory...${NC}"
 cd $v2ray_folder
